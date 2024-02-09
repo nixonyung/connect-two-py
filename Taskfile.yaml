@@ -1,0 +1,8 @@
+version: "3"
+dotenv: [".env"]
+
+tasks:
+  test:
+    cmds:
+      - rm -rf ./tests/results
+      - bats --jobs $(nproc) --verbose-run ./tests
